@@ -30,7 +30,7 @@ public class Fin_Class {
 	    	
 	    driver.get("https://www.finartz.com/");
 	    Assert.assertTrue(driver.getTitle().equals("Finartz - Homepage"));
-	    System.out.println("Web Sitesi Açıldı");
+	    System.out.println("Web Sitesi AÃ§Ä±ldÄ±");
 	  
 	    driver.manage().timeouts().implicitlyWait(50, TimeUnit.SECONDS);
 	    
@@ -38,15 +38,15 @@ public class Fin_Class {
 	    //homepageLink.click();
 	    driver.get("https://www.finartz.com/solutions.html");
 	    Assert.assertTrue(driver.getTitle().equals("Solutions - Finartz"));
-		System.out.println("Solutions Sayfası Açıldı");
+		System.out.println("Solutions SayfasÄ± AÃ§Ä±ldÄ±");
 	    
 		List<WebElement> rows = driver.findElements(By.className("title"));
-		System.out.println("Seçilen toplam satır: " + rows.size());
+		System.out.println("SeÃ§ilen toplam satÃ½r: " + rows.size());
 		
-        //iterator, listelerden geçiş yapmasını sağlayan bir nesnedir.
-		//İterator kullanarak tüm unsurları yineleyecegiz 
+                 //iterator, listelerden geÃ§iÃ¾ yapmasÄ±nÄ± saglayan bir nesnedir   
+		//Ä±terator kullanarak tÃ¼m unsurlarÄ± yineleyecegiz 
 		Iterator<WebElement> iter = rows.iterator();
-        //Bu listenin bir elemanı olup olmadığını kontrol eder
+               //Bu listenin bir elemanÃ½ olup olmadÄ±gÄ±nÄ± kontrol eder
 			while (iter.hasNext())  {
 
 				// Birer birer yinelenir
@@ -55,7 +55,7 @@ public class Fin_Class {
 				// metni al
 				String label = item.getText();
 
-				//metni yazdır
+				//metni yazdÃ½r
 				System.out.println(label);}
 			
 		driver.manage().timeouts().implicitlyWait(500, TimeUnit.SECONDS);
@@ -63,14 +63,14 @@ public class Fin_Class {
 			
 		driver.get("http://medium.com/finartz");
 		Assert.assertTrue(driver.getTitle().equals("Finartz"));
-		System.out.println("Medium Sayfası Açıldı");
+		System.out.println("Medium SayfasÃ½ AÃ§Ã½ldÃ½");
 		
 		WebElement login=driver.findElement(By.className("js-predictiveSearchInput"));
 		login.sendKeys("Kamu Hizmetleri");
 		driver.findElement(By.className("browser-chrome")).click();
 		
-		//driver.close();
-		//System.out.println("Tarayıcı başarıyla kapatıldı");
+		driver.close();
+		System.out.println("TarayÄ±cÄ± baÅŸarÄ±yla kapatÄ±ldÄ±");
 		
 			}
 	    
